@@ -1,0 +1,26 @@
+{
+  "name": "portfolio-main",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.html",
+  "scripts": {
+    "build:css": "npx @tailwindcss/cli -i ./src/input.css -o ./src/style.css",
+    "build": "npm run build:css && eleventy",
+    "dev": "npm run build:css && concurrently \"npx @tailwindcss/cli -i ./src/input.css -o ./src/style.css --watch\" \"eleventy --serve\""
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6",
+    "@tailwindcss/cli": "^4.2.2",
+    "concurrently": "^10.0.3",
+    "luxon": "^3.7.2",
+    "tailwindcss": "^4.2.2"
+  },
+  "dependencies": {
+    "jsdom": "^29.1.1",
+    "puppeteer": "^25.2.1"
+  }
+}

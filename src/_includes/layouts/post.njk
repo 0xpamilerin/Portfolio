@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{{ title }} | 0xPamilerin</title>
+    
+    <script defer data-domain="0xpamilerin.com" src="https://plausible.io/js/script.js"></script>
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/style.css">
+
+    <!-- Open Graph SEO -->
+    <meta property="og:title" content="{{ title }}" />
+    <meta property="og:description" content="{{ excerpt }}" />
+    <meta property="og:type" content="article" />
+    {% if thumbnail %}
+    <meta property="og:image" content="{{ thumbnail }}" />
+    <meta name="twitter:card" content="summary_large_image">
+    {% else %}
+    <meta name="twitter:card" content="summary">
+    {% endif %}
+  </head>
+
+  <body class="font-sans antialiased bg-gray-50 flex flex-col min-h-screen">
+    <script src="/theme.js"></script>
+    <button class="theme-toggle-btn fixed top-4 right-4 md:top-8 md:right-8 z-50 p-3 rounded-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow-lg ring-1 ring-gray-900/5 dark:ring-white/10 text-gray-800 dark:text-gray-200 hover:scale-110 transition-transform" aria-label="Toggle Dark Mode">
+      <span class="dark:hidden text-xl leading-none block">🌙</span>
+      <span class="hidden dark:block text-xl leading-none">☀️</span>
+    </button>
+    <!-- Header -->
+    <header class="bg-white dark:bg-[#09090b] border-b border-gray-100 dark:border-white/10 shadow-sm transition-colors duration-300">
+      <div class="max-w-3xl mx-auto px-4 py-8 flex justify-between items-center">
+        <a href="/blog/" class="text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white font-medium flex items-center gap-2 transition">
+          &larr; Back to Blog
+        </a>
+        <a href="/" class="text-gray-900 dark:text-white font-bold text-xl hover:text-gray-600 dark:hover:text-gray-300 transition">0xPamilerin</a>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main
+      id="post-content"
+      class="flex-grow w-full max-w-3xl mx-auto px-4 py-12"
+    >
+      <article class="bg-white dark:bg-[#09090b] rounded-3xl p-8 md:p-12 shadow-sm border border-gray-100 dark:border-white/10">
+        <header class="mb-10 text-center">
+          <div class="flex justify-center gap-2 text-xs text-gray-500 dark:text-gray-400 mb-4 uppercase tracking-wider font-semibold">
+            {% for tag in tags %}
+              {% if tag != "posts" %}
+                <span>{{ tag }}</span>{% if not loop.last %}<span class='text-gray-300'>•</span>{% endif %}
+              {% endif %}
+            {% endfor %}
+          </div>
+          <h1 class="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6 leading-tight">{{ title }}</h1>
+          <div class="flex items-center justify-center gap-4 text-sm text-gray-500 dark:text-gray-400">
+            <time datetime="{{ date }}">{{ date | readableDate }}</time>
+            <span>•</span>
+            <span>{{ readingTime }}</span>
+          </div>
+        </header>
+
+        {% if thumbnail %}
+        <div class="w-full h-64 md:h-96 rounded-2xl overflow-hidden mb-10 shadow-sm">
+          <img src="{{ thumbnail }}" alt="{{ title }}" class="w-full h-full object-cover">
+        </div>
+        {% endif %}
+        
+        <div class="prose prose-lg prose-zinc max-w-none text-gray-700 dark:text-gray-300 leading-relaxed">
+          {{ content | safe }}
+        </div>
+        
+        <hr class="my-10 border-gray-100 dark:border-white/10">
+        
+        <footer class="flex items-center justify-between gap-4 flex-wrap">
+          <div class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-gray-100 dark:bg-white/10 rounded-full flex items-center justify-center text-gray-900 dark:text-white font-bold text-xl">
+              0
+            </div>
+            <div>
+              <h3 class="font-medium text-gray-900 dark:text-white">0xPamilerin</h3>
+              <p class="text-sm text-gray-500 dark:text-gray-400">Author</p>
+            </div>
+          </div>
+          
+          <button id="share-btn" class="flex items-center gap-2 px-4 py-2 bg-gray-100 dark:bg-white/10 text-gray-900 dark:text-white rounded-lg shadow-sm hover:bg-gray-200 dark:hover:bg-white/20 transition font-medium">
+            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z"></path></svg>
+            Share
+          </button>
+        </footer>
+      </article>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-sm text-gray-500 border-t border-gray-200 dark:border-white/10 mt-12">
+      © <span id="footer-year"></span> 0xPamilerin. All rights reserved.
+    </footer>
+
+    <script>
+      document.getElementById('footer-year').textContent = new Date().getFullYear();
+      
+      const shareBtn = document.getElementById('share-btn');
+      if (shareBtn) {
+        shareBtn.addEventListener('click', async () => {
+          const shareData = {
+            title: "{{ title }}",
+            text: "Check out this post: {{ title }}",
+            url: window.location.href,
+          };
+          if (navigator.share) {
+            try { await navigator.share(shareData); } catch (err) {}
+          } else {
+            await navigator.clipboard.writeText(window.location.href);
+            const originalText = shareBtn.innerHTML;
+            shareBtn.innerHTML = "Copied!";
+            setTimeout(() => shareBtn.innerHTML = originalText, 2000);
+          }
+        });
+      }
+    </script>
+  </body>
+</html>

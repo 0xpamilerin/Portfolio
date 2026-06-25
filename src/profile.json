@@ -1,0 +1,163 @@
+{
+  "meta": {
+    "schemaVersion": "1.0.0",
+    "generatedAt": "2025-09-17"
+  },
+  "profile": {
+    "name": "0xPamilerin",
+    "role": "Cinematographer & Frontend Developer",
+    "photo": {
+      "src": "/assets/logos/oxpam.jpg",
+      "alt": "Portrait of 0xPamilerin"
+    },
+    "summary": "I’m a passionate cinematographer and front-end developer dedicated to creating visually engaging stories and seamless digital experiences."
+  },
+  "personalDetails": {
+    "email": "adeekopamilerin31@gmail.com",
+    "website": "https://0xpamilerin.netlify.app/",
+    "phone": "+234 907 391 3329",
+    "address": "Ibadan, Nigeria"
+  },
+  "socials": [
+    { "platform": "Instagram", "handle": "@0xpamilerin", "url": "https://instagram.com/0xpamilerin", "icon": "/assets/icons/inst.jpg" },
+    { "platform": "Twitter",   "handle": "@0xpamilerin", "url": "https://x.com/0xpamilerin", "icon": "/assets/icons/twitter.svg" },
+    { "platform": "LinkedIn",  "handle": "adeeko-pamilerin",  "url": "https://www.linkedin.com/in/adeeko-pamilerin/", "icon": "/assets/icons/linkedin.svg" }
+  ],
+  "languages": [
+    { "name": "English", "proficiency": "Professional working" },
+    { "name": "Yorùbá", "proficiency": "Native" }
+  ],
+  "hobbies": [
+    "Music",
+    "Exercise",
+    "Gaming",
+    "Editing"
+  ],
+  "experience": [
+    {
+      "company": "American Open University",
+      "role": "Instructional Designer",
+      "location": "Ibadan, Nigeria",
+      "startDate": "2026-02",
+      "endDate": "2026-06",
+      "logo": "/assets/logos/AOU.png",
+      "summary": "Designed and developed visually appealing e-learning modules, transforming static curriculum into interactive digital courses using specialized instructional software.",
+      "highlights": [
+        "Integrated Synthesia AI avatars and multimedia within Articulate Rise 360, applying visual composition principles to enhance student engagement.",
+        "Managed the end-to-end course creation lifecycle, from storyboarding to exporting SCORM packages for seamless LMS deployment."
+      ]
+    },
+    {
+      "company": "Maylancer IT Limited",
+      "role": "Light and Sound Technician, Assistant Camera Operator",
+      "location": "Ibadan, Nigeria",
+      "startDate": "2025-07",
+      "endDate": "2026-04",
+      "logo": "/assets/logos/may.png",
+      "highlights": [
+        "Coordinated lighting rigs and audio levels for diverse shoots, applying cinematography principles to enhance visual composition and audio clarity."
+      ],
+      "summary": "Managed on-set audio and visual equipment, ensuring optimal lighting and sound quality while assisting the primary camera operator with technical setups and scene framing."
+    }
+  ],
+  "education": [
+    {
+      "institution": "University of Ibadan",
+      "location": "Ibadan, Nigeria",
+      "degree": "B.Sc. — Computer Science",
+      "startDate": "2020",
+      "endDate": "2025",
+      "logo": "/assets/logos/ui.jpeg"
+    },
+    {
+      "institution": "Maylancer IT Limited",
+      "location": "Ibadan, Nigeria",
+      "degree": "IT Training Certificate - JavaScript.",
+      "startDate": "July 2025",
+      "endDate": "Sept 2025",
+      "logo": "/assets/logos/may.png"
+    }
+  ],
+  "projects": [
+    {
+      "title": "GuezIt",
+      "coverImage": { "src": "/assets/projects/guess-thumbnail.jpg", "alt": "Dashboard components laid out on a workspace" },
+      "summary": "A Guess Game built with JavaScript is an interactive web app where players try to guess a randomly generated number within a set range, receiving feedback like “Too high” or “Too low” until they guess correctly.",
+      "tags": ["JavaScript", "Tailwind CSS", "Web Game"],
+      "links": [
+        { "label": "Live Demo", "url": "https://guezit.netlify.app/" },
+        { "label": "GitHub", "url": "https://github.com/0xpamilerin/Guess-Game" }
+      ]
+    },
+    {
+      "title": "PamBite",
+      "coverImage": { "src": "/assets/projects/food.jpg", "alt": "Map interface showing Lagos markets with pins" },
+      "summary": "PamBite delivers high-quality, flavorful meals designed to satisfy every taste. We blend creativity, freshness, and passion into every dish.",
+      "tags": ["Food Ordering", "Cart System", "User-Friendly", "Responsive Design"],
+      "links": [
+        { "label": "Live Demo", "url": "https://pambite.netlify.app/" },
+        { "label": "GitHub", "url": "https://github.com/0xpamilerin/PamBite" }
+      ]
+    },
+    {
+      "title": "0xPamFlix",
+      "coverImage": { "src": "/assets/projects/preview.jpg", "alt": "Mobile screens showing transit schedules and route chips" },
+      "summary": "Built by 0xpamilerin, this site showcases a simple demonstration of movie API integration, highlighting how real-time data can power dynamic web content.",
+      "tags": ["UI/UX", "Movie-API", "Frontend", "Netlify"],
+      "links": [
+        { "label": "Live Demo", "url": "https://0xpamflix.netlify.app/" },
+        { "label": "GitHub", "url": "https://github.com/0xpamilerin/0xPamFlix" }
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Frontend Development",
+      "icon": "💻",
+      "items": ["HTML & CSS", "JavaScript (ES6+)", "Tailwind CSS", "Responsive Design", "Web Development"]
+    },
+    {
+      "category": "Instructional Design",
+      "icon": "📚",
+      "items": [
+        "Articulate Rise 360",
+        "Synthesia",
+        "Storyline"
+      ]
+    },
+    {
+      "category": "Tools & Workflow",
+      "icon": "🛠",
+      "items": ["Git & GitHub", "User Experience", "Figma", "Problem Solving"]
+    }
+  ],
+  "courses": [
+    {
+      "title": "Intro to Cinematography",
+      "provider": "Maylancer IT Limited",
+      "startDate": "2025-07",
+      "endDate": "Present",
+      "certificateUrl": ""
+    },
+    {
+      "title": "Web Development Fundamentals",
+      "provider": "Practicode Academy",
+      "startDate": "2024-07",
+      "endDate": "2024-10",
+      "certificateUrl": "/assets/projects/p-cert@practicode.jpg"
+    },
+    {
+      "title": "Javascript: From Zero to Hero!",
+      "provider": "Maylancer",
+      "startDate": "2025-07",
+      "endDate": "2025-10",
+      "certificateUrl": "/assets/projects/p-cert@may.jpg"
+    }
+  ],
+  "settings": {
+    "primaryColor": "#5B6DFF",
+    "accentColor": "#E9ECF8",
+    "enableDarkMode": true,
+    "dateFormat": "MMM yyyy"
+  }
+}

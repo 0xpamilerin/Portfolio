@@ -1,0 +1,92 @@
+---
+title: "Blog | 0xPamilerin"
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Blog | 0xPamilerin</title>
+    
+    <meta name="description" content="Articles on frontend development, technology, and creative work by 0xPamilerin." />
+    <meta property="og:title" content="Blog | 0xPamilerin" />
+    <meta property="og:description" content="Articles on frontend development, technology, and creative work by 0xPamilerin." />
+    <meta property="og:type" content="website" />
+    
+    <script defer data-domain="0xpamilerin.com" src="https://plausible.io/js/script.js"></script>
+
+    <link rel="icon" type="image/png" href="/favicon.png">
+    <link rel="stylesheet" href="/style.css">
+  </head>
+
+  <body class="font-sans antialiased bg-gray-50 flex flex-col min-h-screen">
+    <script src="/theme.js"></script>
+    <button class="theme-toggle-btn fixed top-4 right-4 md:top-8 md:right-8 z-50 p-3 rounded-full bg-white/80 dark:bg-slate-800/80 backdrop-blur-md shadow-lg ring-1 ring-gray-900/5 dark:ring-white/10 text-gray-800 dark:text-gray-200 hover:scale-110 transition-transform" aria-label="Toggle Dark Mode">
+      <span class="dark:hidden text-xl leading-none block">🌙</span>
+      <span class="hidden dark:block text-xl leading-none">☀️</span>
+    </button>
+    <!-- Header -->
+    <header class="bg-white dark:bg-[#09090b] border-b border-gray-100 dark:border-white/10 shadow-sm relative transition-colors duration-300">
+      <div class="absolute top-0 left-0 p-6 md:p-8">
+        <a href="/" class="text-gray-900 dark:text-gray-300 hover:text-gray-600 dark:hover:text-white font-medium flex items-center gap-2 transition">
+          &larr; Back to Portfolio
+        </a>
+      </div>
+      <div class="max-w-6xl mx-auto px-4 py-10 text-center mt-6 md:mt-0">
+        <h1 class="text-3xl font-bold text-gray-900 dark:text-white transition-colors duration-300">
+          Blog
+        </h1>
+        <p class="mt-2 text-gray-600 dark:text-gray-300 transition-colors duration-300">
+          Articles on frontend development, technology, and creative work
+        </p>
+      </div>
+    </header>
+
+    <!-- Main Content -->
+    <main
+      id="blog-posts"
+      class="flex-grow w-full max-w-6xl mx-auto px-4 py-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8"
+    >
+      {%- for post in collections.posts | reverse -%}
+      <article class="premium-card flex flex-col h-full relative group">
+        {% if post.data.thumbnail %}
+        <div class="w-full h-48 mb-4 overflow-hidden rounded-t-xl">
+          <img src="{{ post.data.thumbnail }}" alt="{{ post.data.title }}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500 filter grayscale-[15%] group-hover:grayscale-0">
+        </div>
+        {% endif %}
+        <div class="flex flex-col h-full p-6 {% if post.data.thumbnail %}pt-0{% endif %}">
+          <header class="mb-4">
+            <h2 class="text-2xl font-bold text-gray-900 dark:text-white mb-2">{{ post.data.title }}</h2>
+            <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">{{ post.date | readableDate }} • {{ post.data.readingTime }}</p>
+          </header>
+          <p class="text-gray-700 dark:text-gray-300 mb-6 flex-grow">{{ post.data.excerpt }}</p>
+          <footer class="mt-auto pt-2 flex flex-col gap-4">
+            <div class="flex flex-wrap gap-2 text-sm font-medium text-gray-700 dark:text-gray-300">
+              {% for tag in post.data.tags %}
+                {% if tag != "posts" %}
+                <span class="bg-gray-100 dark:bg-white/10 px-2.5 py-1 rounded-md whitespace-nowrap">#{{ tag }}</span>
+                {% endif %}
+              {% endfor %}
+            </div>
+            <div>
+              <a href="{{ post.url | url }}" class="portfolio-link inline-flex items-center gap-1 font-semibold text-gray-900 dark:text-white">
+                Read more <span aria-hidden="true">&rarr;</span>
+                <span class="absolute inset-0"></span>
+              </a>
+            </div>
+          </footer>
+        </div>
+      </article>
+      {%- else -%}
+      <p class="text-center text-gray-500 dark:text-gray-400 col-span-full">No blog posts available.</p>
+      {%- endfor -%}
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center py-8 text-sm text-gray-500 border-t border-gray-200 dark:border-white/10">
+      © <span id="footer-year"></span> 0xPamilerin. All rights reserved.
+    </footer>
+
+    <script>document.getElementById('footer-year').textContent = new Date().getFullYear();</script>
+  </body>
+</html>

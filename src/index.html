@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>My Portfolio | 0xPamilerin</title>
+
+  <meta name="description"
+    content="Portfolio of 0xPamilerin — Cinematographer & Frontend Developer based in Ibadan, Nigeria." />
+  <meta property="og:title" content="My Portfolio | 0xPamilerin" />
+  <meta property="og:description" content="Portfolio of 0xPamilerin — Cinematographer & Frontend Developer." />
+  <meta property="og:type" content="website" />
+  <meta property="twitter:card" content="summary_large_image" />
+
+  <script defer data-domain="0xpamilerin.com" src="https://plausible.io/js/script.js"></script>
+  <link rel="icon" type="image/png" href="/favicon.png">
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body class="font-sans antialiased">
+  <script src="/theme.js"></script>
+
+  <!-- ══════════════════════════════════════
+         NAVIGATION BAR
+    ══════════════════════════════════════ -->
+  <nav id="main-nav" aria-label="Main navigation">
+    <div class="max-w-[1536px] mx-auto px-6 h-16 flex items-center justify-between gap-4">
+
+      <a href="#hero" class="nav-brand">0xPamilerin</a>
+
+      <!-- Desktop links -->
+      <ul class="hidden md:flex items-center gap-1">
+        <li><a href="#experience" class="nav-link">Experience</a></li>
+        <li><a href="#education" class="nav-link">Education</a></li>
+        <li><a href="#projects" class="nav-link">Projects</a></li>
+        <li><a href="#skills" class="nav-link">Skills</a></li>
+        <li><a href="#courses" class="nav-link">Courses</a></li>
+        <li>
+          <a href="javascript:void(0)" class="nav-blog-btn opacity-50 cursor-not-allowed" title="Blog is currently under construction">Blog (Coming Soon)</a>
+        </li>
+      </ul>
+
+      <!-- Right controls -->
+      <div class="flex items-center gap-2">
+        <button
+          class="theme-toggle-btn p-2.5 rounded-full bg-gray-100 dark:bg-slate-800/80 text-gray-800 dark:text-gray-200 hover:scale-110 transition-transform"
+          aria-label="Toggle Dark Mode">
+          <span class="dark:hidden text-base leading-none block">🌙</span>
+          <span class="hidden dark:block text-base leading-none">☀️</span>
+        </button>
+        <button id="nav-hamburger"
+          class="md:hidden p-2.5 rounded-full bg-gray-100 dark:bg-slate-800/80 text-gray-800 dark:text-gray-200 hover:scale-110 transition-transform"
+          aria-label="Toggle menu" aria-expanded="false">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16" />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <!-- Mobile dropdown -->
+    <div id="mobile-menu" class="mobile-menu hidden md:hidden border-t border-gray-100 dark:border-slate-800">
+      <ul class="flex flex-col px-6 py-3 gap-1">
+        <li><a href="#experience" class="nav-link mobile-nav-link block py-2">Experience</a></li>
+        <li><a href="#education" class="nav-link mobile-nav-link block py-2">Education</a></li>
+        <li><a href="#projects" class="nav-link mobile-nav-link block py-2">Projects</a></li>
+        <li><a href="#skills" class="nav-link mobile-nav-link block py-2">Skills</a></li>
+        <li><a href="#courses" class="nav-link mobile-nav-link block py-2">Courses</a></li>
+        <li><a href="javascript:void(0)" class="nav-link mobile-nav-link block py-2 opacity-50 cursor-not-allowed" title="Blog is currently under construction">Blog (Coming Soon)</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ══════════════════════════════════════
+         HERO
+    ══════════════════════════════════════ -->
+  <header id="hero" class="hero-section flex flex-col items-center justify-center text-center px-4">
+  </header>
+
+  <!-- ══════════════════════════════════════
+         MAIN CONTENT
+    ══════════════════════════════════════ -->
+  <main id="content" class="flex flex-col md:flex-row max-w-[1536px] mx-auto mt-8 px-4 gap-6 pb-16">
+
+    <!-- Sidebar -->
+    <aside id="sidebar"
+      class="w-full md:w-80 lg:w-96 shrink-0 text-gray-900 dark:text-gray-200 md:sticky md:top-20 md:self-start md:max-h-[calc(100vh-5.5rem)] md:overflow-y-auto">
+      <section id="personal" class="space-y-2"></section>
+      <section id="socials" class="space-y-2"></section>
+      <section id="languages" class="space-y-2"></section>
+      <section id="hobbies" class="space-y-2"></section>
+    </aside>
+
+    <!-- Main sections -->
+    <div class="flex-1 min-w-0 space-y-10">
+      <section id="experience"></section>
+      <section id="education"></section>
+      <section id="projects"></section>
+      <section id="skills" class="premium-card"></section>
+      <section id="courses"></section>
+    </div>
+  </main>
+
+  <footer id="site-footer"
+    class="text-center py-8 text-sm text-gray-500 dark:text-gray-500 border-t border-gray-200 dark:border-slate-800">
+  </footer>
+
+  <script src="/app.js" defer></script>
+</body>
+
+</html>
