@@ -7,7 +7,7 @@
     "name": "0xPamilerin",
     "role": "Cinematographer & Frontend Developer",
     "photo": {
-      "src": "/assets/logos/oxpam.jpg",
+      "src": "/assets/logos/oxpam.jpeg",
       "alt": "Portrait of 0xPamilerin"
     },
     "summary": "I’m a passionate cinematographer and front-end developer dedicated to creating visually engaging stories and seamless digital experiences."
@@ -31,7 +31,7 @@
     "Music",
     "Exercise",
     "Gaming",
-    "Editing"
+    "Building Side Projects"
   ],
   "experience": [
     {
@@ -136,22 +136,19 @@
       "title": "Intro to Cinematography",
       "provider": "Maylancer IT Limited",
       "startDate": "2025-07",
-      "endDate": "Present",
-      "certificateUrl": ""
+      "endDate": "Present"
     },
     {
       "title": "Web Development Fundamentals",
       "provider": "Practicode Academy",
       "startDate": "2024-07",
-      "endDate": "2024-10",
-      "certificateUrl": "/assets/projects/p-cert@practicode.jpg"
+      "endDate": "2024-10"
     },
     {
       "title": "Javascript: From Zero to Hero!",
       "provider": "Maylancer",
       "startDate": "2025-07",
-      "endDate": "2025-10",
-      "certificateUrl": "/assets/projects/p-cert@may.jpg"
+      "endDate": "2025-10"
     }
   ],
   "settings": {

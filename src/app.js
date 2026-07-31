@@ -74,11 +74,14 @@ document.addEventListener("DOMContentLoaded", () => {
         hero.innerHTML = `
           <div class="hero-content">
             <div class="profile-ring">
-              <img
-                src="${data.profile.photo.src}"
-                alt="${data.profile.photo.alt}"
-                class="w-36 h-36 rounded-full object-cover block"
-              />
+              <div class="w-36 h-36 rounded-full overflow-hidden relative">
+                <img
+                  src="${data.profile.photo.src}"
+                  alt="${data.profile.photo.alt}"
+                  class="w-full h-full object-cover"
+                  style="object-position: center 92%; transform: scale(1.7);"
+                />
+              </div>
             </div>
             <h1 class="hero-name">${data.profile.name}</h1>
             <p class="hero-role">${data.profile.role}</p>
@@ -191,10 +194,10 @@ document.addEventListener("DOMContentLoaded", () => {
                   <span>📍 ${exp.location}</span>
                   <span>🗓 ${formatDate(exp.startDate)} – ${formatDate(exp.endDate)}</span>
                 </div>
-                <p class="text-gray-700 dark:text-gray-300 text-sm leading-relaxed mb-3">${exp.summary}</p>
+                <p class="text-gray-900 dark:text-gray-300 text-base leading-relaxed mb-3">${exp.summary}</p>
                 <ul class="space-y-1.5">
                   ${exp.highlights.map((h) => `
-                    <li class="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
+                    <li class="flex items-start gap-2 text-base text-gray-900 dark:text-gray-400">
                       <span class="text-slate-500 dark:text-zinc-500 shrink-0 mt-0.5">▸</span>
                       <span>${h}</span>
                     </li>
@@ -240,7 +243,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (projects) {
         projects.innerHTML = `
           <h2 class="section-title">Projects</h2>
-          <div class="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
+          <div class="grid gap-5 md:grid-cols-2 lg:grid-cols-3">
             ${data.projects.map((proj) => `
               <article class="project-card flex flex-col">
                 <div class="project-img-wrap overflow-hidden">
@@ -249,7 +252,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 </div>
                 <div class="p-5 flex flex-col gap-3 flex-grow">
                   <h3 class="text-base font-bold text-gray-900 dark:text-white">${proj.title}</h3>
-                  <p class="text-gray-600 dark:text-gray-400 text-xs leading-relaxed flex-grow">${proj.summary}</p>
+                  <p class="text-gray-800 dark:text-gray-400 text-sm leading-relaxed flex-grow">${proj.summary}</p>
                   <ul class="flex flex-wrap gap-1.5">
                     ${proj.tags.map((t) => `<li class="tag-indigo text-xs">${t}</li>`).join("")}
                   </ul>
@@ -306,12 +309,6 @@ document.addEventListener("DOMContentLoaded", () => {
                   <p class="text-xs text-gray-500 dark:text-gray-400 mt-1">
                     🗓 ${formatDate(c.startDate)} – ${formatDate(c.endDate)}
                   </p>
-                  ${c.certificateUrl
-            ? `<a href="${c.certificateUrl}" target="_blank" class="inline-flex items-center gap-1.5 mt-2 text-xs font-semibold text-blue-600 dark:text-blue-400 hover:underline">
-                        🏆 View Certificate
-                       </a>`
-            : `<span class="text-xs text-gray-400 dark:text-gray-600 mt-1 block italic">Certificate coming soon</span>`
-          }
                 </div>
               </div>
             `).join("")}
