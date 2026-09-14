@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", () => {
   // ──────────────────────────────────────────────────────────
   //  DATA FETCH
   // ──────────────────────────────────────────────────────────
-  fetch("/profile.json")
+  fetch(`/profile.json?t=${Date.now()}`, { cache: "no-store" })
     .then((r) => r.json())
     .then((data) => {
 

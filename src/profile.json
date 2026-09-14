@@ -21,6 +21,7 @@
   "socials": [
     { "platform": "Instagram", "handle": "@0xpamilerin", "url": "https://instagram.com/0xpamilerin", "icon": "/assets/icons/inst.jpg" },
     { "platform": "Twitter",   "handle": "@0xpamilerin", "url": "https://x.com/0xpamilerin", "icon": "/assets/icons/twitter.svg" },
+    { "platform": "TikTok",    "handle": "@0xpamilerin", "url": "https://www.tiktok.com/@0xpamilerin", "icon": "/assets/icons/tiktok.svg" },
     { "platform": "LinkedIn",  "handle": "adeeko-pamilerin",  "url": "https://www.linkedin.com/in/adeeko-pamilerin/", "icon": "/assets/icons/linkedin.svg" }
   ],
   "languages": [
@@ -80,6 +81,16 @@
   ],
   "projects": [
     {
+      "title": "Aura Holistic & Wellness",
+      "coverImage": { "src": "/assets/projects/aura.png", "alt": "Aura Holistic & Wellness platform interface" },
+      "summary": "Modern multi-page web platform for a traditional wellness clinic. Includes a multi-step appointment booking wizard with live time-slot selection, a dynamic botanical catalogue with real-time search across 70+ products, and responsive healthcare UI/UX.",
+      "tags": ["JavaScript", "HTML5", "CSS3", "UI/UX Design", "Responsive Web"],
+      "links": [
+        { "label": "Live Demo", "url": "https://aura-holistic.netlify.app/" },
+        { "label": "GitHub", "url": "https://github.com/0xpamilerin/Aura_Holistics" }
+      ]
+    },
+    {
       "title": "GuezIt",
       "coverImage": { "src": "/assets/projects/guess-thumbnail.jpg", "alt": "Dashboard components laid out on a workspace" },
       "summary": "A Guess Game built with JavaScript is an interactive web app where players try to guess a randomly generated number within a set range, receiving feedback like “Too high” or “Too low” until they guess correctly.",
@@ -128,7 +139,7 @@
     {
       "category": "Tools & Workflow",
       "icon": "🛠",
-      "items": ["Git & GitHub", "User Experience", "Figma", "Problem Solving"]
+      "items": ["Git & GitHub", "User Experience", "Problem Solving"]
     }
   ],
   "courses": [
