@@ -3,7 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>0xpamilerin — Frontend Developer</title>
+  
+  <!-- Primary SEO Metadata -->
+  <title>0xpamilerin | Pamilerin Adeeko - Front-End Developer</title>
+  <meta name="description" content="Portfolio of Pamilerin Adeeko (0xpamilerin), a front-end developer based in Ibadan, Nigeria specializing in React, JavaScript, Tailwind CSS, and building interactive web applications." />
+  <meta name="keywords" content="Pamilerin Adeeko, 0xpamilerin, Front-End Developer, UI Engineer, React Developer Nigeria, Web Developer Ibadan" />
+  <meta name="author" content="Pamilerin Adeeko" />
+  <link rel="canonical" href="https://0xpamilerin.netlify.app/" />
+
+  <!-- Open Graph / Social Media Previews (LinkedIn, Twitter, WhatsApp) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://0xpamilerin.netlify.app/" />
+  <meta property="og:title" content="0xpamilerin | Pamilerin Adeeko - Front-End Developer" />
+  <meta property="og:description" content="Explore the portfolio of 0xpamilerin, showcasing modern web development projects built with React, Tailwind CSS, and Supabase." />
+  
+  <!-- Twitter Card Data -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="0xpamilerin | Pamilerin Adeeko - Front-End Developer" />
+  <meta name="twitter:description" content="Front-End Developer and UI Engineer building high-performance web applications." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="/favicon.png" />
+
+  <!-- Structured Data: JSON-LD Person Schema (Bridges 0xpamilerin & Real Name) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Pamilerin Adeeko",
+    "alternateName": "0xpamilerin",
+    "url": "https://0xpamilerin.netlify.app/",
+    "jobTitle": "Front-End Developer",
+    "worksFor": {
+      "@type": "Organization",
+      "name": "Freelance / Available for Hire"
+    },
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Ibadan",
+      "addressCountry": "Nigeria"
+    },
+    "sameAs": [
+      "https://github.com/0xpamilerin",
+      "https://www.linkedin.com/in/pamilerin-adeeko"
+    ]
+  }
+  </script>
+
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;800&display=swap" rel="stylesheet" />
@@ -136,12 +182,28 @@
       opacity: 0;
       transform: translateY(30px) scale(0.95);
       animation: name-in 1s cubic-bezier(0.16, 1, 0.3, 1) 1.8s forwards;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+    }
+
+    .handle-tag {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: clamp(0.9rem, 2vw, 1.25rem);
+      font-weight: 700;
+      color: var(--accent);
+      letter-spacing: 0.15em;
+      margin-bottom: 0.35rem;
+      text-shadow: 0 0 16px rgba(0, 229, 255, 0.6);
+      display: inline-block;
     }
 
     .name {
-      font-size: clamp(3rem, 8vw, 6.5rem);
+      font-size: clamp(2.5rem, 6.5vw, 5.25rem);
       font-weight: 800;
       letter-spacing: -0.03em;
+      line-height: 1.1;
       background: linear-gradient(135deg, #ffffff 0%, var(--accent) 50%, var(--accent-2) 100%);
       background-size: 200% 200%;
       -webkit-background-clip: text;
@@ -430,7 +492,8 @@
   <!-- Decorative code snippets -->
   <div class="code-block top-left">
 <span class="purple">const</span> <span class="highlight">developer</span> = {
-  name: <span class="pink">"0xpamilerin"</span>,
+  name: <span class="pink">"Pamilerin Adeeko"</span>,
+  handle: <span class="pink">"0xpamilerin"</span>,
   role: <span class="pink">"Frontend Engineer"</span>,
   passion: <span class="pink">"Pixel Perfect UI"</span>,
 };</div>
@@ -458,11 +521,12 @@
     <!-- Name -->
     <div class="name-wrapper">
       <div class="name-glow"></div>
-      <h1 class="name">0xpamilerin</h1>
+      <span class="handle-tag">0xpamilerin</span>
+      <h1 class="name">Pamilerin Adeeko</h1>
     </div>
 
     <!-- Title -->
-    <p class="title">Frontend Developer</p>
+    <p class="title">Frontend Developer &amp; UI Engineer</p>
 
     <!-- Skills -->
     <div class="skills">
